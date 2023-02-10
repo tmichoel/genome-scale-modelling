@@ -1,24 +1,39 @@
 
 ---
-title: "Documentation"
-linkTitle: "Documentation"
+title: "Probabilistic and causal modelling in computational biology"
+linkTitle: "Lecture notes"
 weight: 20
 menu:
   main:
     weight: 20
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+Machine learning plays an important role in computational biology. See the [Machine Learning in Computational and Systems Biology community](http://cosi.iscb.org/wiki/MLCSB:Home) or the [Machine Learning in Computational Biology conference series](http://mlcb.org).
 
+These lecture notes focus on **probabilistic** machine learning methods for computational biology, where the experimental data are viewed as random samples from an underlying data-generating process. 
 
-This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project. 
+The **"probabilistic modelling"** in the title refers to the use of abstract data-generating processes, not based on any specific biological mechanisms, and derived from generic models and methods. A typical example will be clustering using [Gaussian mixture models](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model).
 
-For large documentation sets we recommend adding content under the headings in this section, though if some or all of them don’t apply to your project feel free to remove them or add your own. You can see an example of a smaller Docsy documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which lives in the [Docsy theme repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to copy its docs section. 
+To speak of **"causal modelling"** will require something more, namely that the data-generating process is based on some qualitative prior knowledge or understanding of the true underlying biological process. A typical example will be  [path analysis](https://en.wikipedia.org/wiki/Path_analysis_(statistics)).
 
-Other content such as marketing material, case studies, and community updates should live in the [About](/about/) and [Community](/community/) pages.
+The notes are divided in chapters, each focusing on a specific class of methods:
 
-Find out how to use the Docsy theme in the [Docsy User Guide](https://docsy.dev/docs/). You can learn more about how to organize your documentation (and how we organized this site) in [Organizing Your Content](https://docsy.dev/docs/best-practices/organizing-content/).
+- Clustering
+- Regularized regression
+- Dimensionality reduction
+- Causal inference
+- Graphical models
+- Spatio-Temporal models
 
+Each chapter follows the same structure:
 
+- A "classic" biological or biomedical research paper is studied where the algorithm (or class of algorithms) of interest was first used. A more recent follow-up or related paper is given as a reading assignment.
+- The method used in the classic paper is presented in detail, with additional more modern methods to solve the same type of problem. The methods are put in practice in a programming assignment. Where possible, original data from the papers studied in the first part is used. 
+
+Four appendices contain the minimum required background knowledge on gene regulation, probability theory, linear algebra, and optimization.
+
+The lecture notes are part of the [pcmcb-lectures repository](https://github.com/tmichoel/pcmcb-lectures), which contains linked scripts and notebooks for downloading test data and applying the methods studied in each chapter.
+
+{{< alert title="A note on figures and copyright" >}}
+One of the objectives of the course is to learn to read and understand scientific papers. Figures from papers selected for discussion are reproduced in these notes. Attribution to the original authors is always given. Where possible [open access](https://en.wikipedia.org/wiki/Open_access) papers are used, but some "classic" papers date from before the birth of open access. If the full text version of the paper is available on [EuropePMC](https://europepmc.org/), through [Unpaywall](http://blog.europepmc.org/2018/04/unlocking-open-europe-pmc-integrates.html) or otherwise, I've reused figures without seeking any further reprint permission. If anyone feels their copyright is violated, please contact me to take down your content.
+{{< /alert >}}
