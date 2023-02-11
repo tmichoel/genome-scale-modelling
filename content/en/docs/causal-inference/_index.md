@@ -3,5 +3,5 @@ title: "Causal inference"
 linkTitle: "Causal inference"
 weight: 4
 description: >
-  Here's where your user finds out if your project is for them.
+  Genetics of gene expression. The method of path coefficients. False discovery control.
 ---

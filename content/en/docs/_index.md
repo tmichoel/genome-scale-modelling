@@ -1,6 +1,6 @@
 
 ---
-title: "Probabilistic and causal modelling in computational biology"
+title: "Probabilistic and causal modelling of genome-scale data"
 linkTitle: "Lecture notes"
 weight: 20
 menu:
@@ -32,8 +32,8 @@ Each chapter follows the same structure:
 
 Four appendices contain the minimum required background knowledge on gene regulation, probability theory, linear algebra, and optimization.
 
-The lecture notes are part of the [pcmcb-lectures repository](https://github.com/tmichoel/pcmcb-lectures), which contains linked scripts and notebooks for downloading test data and applying the methods studied in each chapter.
+The lecture notes are taught as part of the [master program in bioinformatics at UiB](https://www.uib.no/en/studies/MAMN-INF/BI), making up about half of the [BINF301 Genome-scale Algorithms](https://www.uib.no/en/course/BINF301) course. As such, good background knowledge on basic bioinformatics and omics data is assumed. 
 
 {{< alert title="A note on figures and copyright" >}}
-One of the objectives of the course is to learn to read and understand scientific papers. Figures from papers selected for discussion are reproduced in these notes. Attribution to the original authors is always given. Where possible [open access](https://en.wikipedia.org/wiki/Open_access) papers are used, but some "classic" papers date from before the birth of open access. If the full text version of the paper is available on [EuropePMC](https://europepmc.org/), through [Unpaywall](http://blog.europepmc.org/2018/04/unlocking-open-europe-pmc-integrates.html) or otherwise, I've reused figures without seeking any further reprint permission. If anyone feels their copyright is violated, please contact me to take down your content.
+One of the objectives of the course is to learn to read and understand scientific papers. Figures from papers selected for discussion are reproduced in these notes. Attribution to the original authors is always given. Where possible [open access](https://en.wikipedia.org/wiki/Open_access) papers are used, but some "classic" papers date from before the birth of open access. If the full text version of the paper is available on [EuropePMC](https://europepmc.org/), through [Unpaywall](http://blog.europepmc.org/2018/04/unlocking-open-europe-pmc-integrates.html) or otherwise, I've reused figures without seeking any further reprint permission. If anyone feels their copyright is violated, please let me know.
 {{< /alert >}}
