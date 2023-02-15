@@ -8,17 +8,7 @@ description: >
   Ridge, lasso and elastic net regression.
 ---
 
-## Topics
-
--   Linear regression and least squares
--   Ridge regression
--   Lasso regression
--   Elastic net regression
--   \\(L_1\\) regularized logistic regression
--   Glmnet software
-
-Reference:
-
+{{< alert title="Reference" >}}
 [ESL] Trevor Hastie, Robert Tibshirani, and Jerome
 Friedman. *The Elements of Statistical Learning (second edition)* (2009).
 
@@ -26,6 +16,8 @@ Friedman. *The Elements of Statistical Learning (second edition)* (2009).
 <https://link.springer.com/book/10.1007%2F978-0-387-84858-7>
 
 Section 2.3, 3.1, 3.2, 3.4, 4.4
+{{< /alert >}}
+
 
 ## Linear models and least squares
 
@@ -208,20 +200,38 @@ Elastic net regression combines ridge and lasso regularization.
 
 {{< alert title="Exercise" >}}Find an expression for $\L(\beta)$ in the case of logistic regression.{{< /alert >}}
 
+## Bayesian regularized regression
+
+```mermaid
+flowchart TB
+  beta -->Y
+  subgraph data
+  X-->Y
+  end
+```
+
 ## Assignment
 
-Use the prostate cancer data available at <https://hastie.su.domains/ElemStatLearn/>
+{{< alert title="CCLE data analysis" >}}
+We will use data from the original Cancer Cell Line Encyclopedia. 
 
-1.  Implement eq. (1).
+<https://www.nature.com/articles/nature11003>
 
-    1.  Compare your results to Table 3.2 in \[ESL\].
-    2.  Compare runtime between computing the matrix inverse explicitly and solving the linear system.
+1. Download and import data:
 
-2.  Find the ridge regession solution and plot profiles of the ridge coefficients as a function of the tuning parameter $-\log\lambda$.
+   - Expression data from [GSE36139](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE36139); use the Series Matrix File GSE36139-GPL15308_series_matrix.txt
+   - Drug sensitivities: Supplementary Table 11 from the [original publication](https://www.nature.com/articles/nature11003); use the "activitiy area" (actarea) as a response variable.
 
-3.  Find the lasso regession solution and plot profiles of the lasso coefficients as a function of the tuning parameter $-\log\lambda$.
+2. Clean data:
 
-4.  Find the elastic net solution for $\alpha=\frac12$ and plot profiles of the elastic net coefficients as a function of the tuning parameter $-\log\lambda$.
+  - Remove genes with low standard deviation
+  - Remove compounds with more than 10% zero values
+  - Align gene expression and sensitivity data to a common set of samples
 
-Efficient implementations for fitting ridge, lasso, and elastic net regularized regression models are available in most programming languages (R, python, julia, matlab), search for glmnet in your language of choice!
+3. Find and understand, and implement the elastic net regression fitting procedure employed by the authors in the paper's supplementary methods. Efficient implementations for fitting ridge, lasso, and elastic net regularized regression models are available in most programming languages (R, python, julia, matlab), search for glmnet in your language of choice!
+ 
+
+4. Try to reproduce Fig 2c and Fig 4a. Do you find the same selected expression features? Note that the paper used both gene expression and mutational features and you used only gene expression features. How could this difference affect the results?
+
+{{< /alert >}}
 

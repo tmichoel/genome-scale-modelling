@@ -193,7 +193,7 @@ Find "kink" in the within-cluster-dissimilarity: Read Elements of Statistical Le
 ## Assignment
 
 
-{{< alert title="Assignment" >}}
+{{< alert title="TCGA BRCA data analysis" >}}
 We will analyze expression data from the TCGA paper:
 
 [*Comprehensive molecular portraits of human breast tumours*](https://doi.org/10.1038/nature11412). Nature 490, 61--70 (2012).
