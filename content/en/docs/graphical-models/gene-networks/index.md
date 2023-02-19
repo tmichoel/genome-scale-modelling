@@ -12,10 +12,9 @@ description: >
 
 
 
-{{< alert title="Reference" >}}
-Friedman, *Inferring Cellular Networks Using Probabilistic Graphical Models* <https://www.science.org/doi/10.1126/science.1094068>
+{{< alert title="Classic paper" >}}
+J Faith *et al.* [*Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles.*](https://doi.org/10.1371/journal.pbio.0050008) PLOS Biol 5:e8 (2007).
 
-Segal, E., Shapira, M., Regev, A. et al. Module networks: identifying regulatory modules and their condition-specific regulators from gene expression data. Nat Genet 34, 166–176 (2003). https://doi.org/10.1038/ng1165
 
 https://www.nature.com/articles/d41586-022-02826-1
 {{< /alert >}}

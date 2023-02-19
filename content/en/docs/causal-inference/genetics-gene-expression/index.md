@@ -12,10 +12,8 @@ description: >
 
 
 
-{{< alert title="Reference" >}}
-Schadt, E., Lamb, J., Yang, X. et al. An integrative genomics approach to infer causal associations between gene expression and disease. Nat Genet 37, 710–717 (2005). <https://doi.org/10.1038/ng1589>
-
-Schadt EE, Molony C, Chudin E, Hao K, Yang X, Lum PY, et al. (2008) Mapping the Genetic Architecture of Gene Expression in Human Liver. PLoS Biol 6(5): e107. https://doi.org/10.1371/journal.pbio.0060107
+{{< alert title="Classic paper" >}}
+Schadt EE, Molony C, Chudin E, Hao K, Yang X, Lum PY, et al. (2008) [*Mapping the Genetic Architecture of Gene Expression in Human Liver*](https://doi.org/10.1371/journal.pbio.0060107). PLoS Biol 6(5): e107. 
 {{< /alert >}}
 
  
@@ -23,7 +21,7 @@ Schadt EE, Molony C, Chudin E, Hao K, Yang X, Lum PY, et al. (2008) Mapping the 
 ## Assignment
 
 
-{{< alert title="Assignment" >}}
+{{< alert title="Reading assignment" >}}
 The GTEx Consortium. *The GTEx Consortium atlas of genetic regulatory effects across human tissues*. Science **369**, 1318--1330 (2020).
 
 <https://doi.org/10.1126/science.aaz1776>

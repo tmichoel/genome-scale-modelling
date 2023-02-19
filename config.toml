@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Genome-scale modelling"
+title = "Genome-scale ML"
 
 # Language settings
 contentDir = "content/en"

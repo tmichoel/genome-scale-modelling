@@ -1,9 +1,9 @@
 ---
-categories: ["Causal inference"]
-tags: ["causal inference", "algorithms"]
-title: "False discovery rates"
-linkTitle: "False discovery rates"
-weight: 4
+categories: ["Statistical significance"]
+tags: ["statistical significance", "algorithms"]
+title: "False discovery rate estimation"
+linkTitle: "False discovery rate estimation"
+weight: 2
 date: 2023-02-10
 description: >
   False discovery rate estimation.

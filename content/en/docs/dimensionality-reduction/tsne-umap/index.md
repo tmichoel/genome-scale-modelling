@@ -1,8 +1,8 @@
 ---
 categories: ["Dimensionality reduction"]
 tags: ["dimensionality reduction", "algorithms"]
-title: "Other dimensionality reduction methods"
-linkTitle: "Other dimensionality reduction methods"
+title: "t-SNE and UMAP"
+linkTitle: "t-SNE and UMAP"
 weight: 3
 date: 2023-02-10
 description: >

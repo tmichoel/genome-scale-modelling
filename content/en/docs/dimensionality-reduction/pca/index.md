@@ -1,12 +1,12 @@
 ---
 categories: ["Dimensionality reduction"]
 tags: ["dimensionality reduction", "algorithms"]
-title: "Probabilistic PCA"
-linkTitle: "Probabilistic PCA"
+title: "Principal component analysis"
+linkTitle: "PCA"
 weight: 2
 date: 2023-02-10
 description: >
-  Probabilistic PCA.
+  PCA. Probabilistic PCA.
 ---
 
 

@@ -13,7 +13,7 @@ description: >
 
 
 {{< alert title="Reference" >}}
-
+Friedman, [*Inferring Cellular Networks Using Probabilistic Graphical Models*](https://www.science.org/doi/10.1126/science.1094068)
 {{< /alert >}}
 
  

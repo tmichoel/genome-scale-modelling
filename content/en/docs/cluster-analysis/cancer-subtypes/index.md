@@ -11,7 +11,7 @@ description: >
 
 ## Gene expression profiling predicts clinical outcome of breast cancer
 
-{{< alert title="Selected paper" >}}
+{{< alert title="Classic paper" >}}
   van 't Veer L et al. [*Gene expression profiling predicts clinical outcome of breast cancer*](https://doi.org/10.1038/415530a) . Nature 415:530 (2002).  
     
   See also the comment: [The molecular outlook](https://www.nature.com/articles/415484a)
@@ -72,7 +72,7 @@ For the purposes of illustration, have a look at the [Pan-Cancer Atlas](https://
 ## Assignment
 
 
-{{< alert title="Pan-Cancer Atlas flagship paper" >}}
+{{< alert title="Reading assignment" >}}
   Read the Pan-Cancer Atlas flagship paper, [*Cell-of-Origin Patterns Dominate the Molecular Classification of 10,000 Tumors from 33 Types of Cancers*](https://doi.org/10.1016%2Fj.cell.2018.03.022)
 
   Answer the following questions:
