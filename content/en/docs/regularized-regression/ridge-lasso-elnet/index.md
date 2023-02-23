@@ -183,7 +183,7 @@ Elastic net regression combines ridge and lasso regularization.
         \end{aligned}$$ 
   The second term encourages highly correlated features to be averaged, while the first term encourages a sparse solution in the coefficients of these averaged features.
 
-  ## Generalized linear models
+## Generalized linear models
 
 - Ridge, lasso, and elastic net regression can also be used to fit generalized linear models when the number of predictors is high.
 - The most commonly used model is logistic regression, where a binary output $Y$ is predicted from a vector of inputs $X^T=(X_1,\dots,X_p)$ via 

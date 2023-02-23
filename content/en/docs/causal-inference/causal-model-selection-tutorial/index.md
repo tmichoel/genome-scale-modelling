@@ -1,12 +1,12 @@
 ---
 categories: ["Causal inference"]
 tags: ["causal inference", "algorithms"]
-title: "Causal model selection (Extra)"
-linkTitle: "Causal model selection (Extra)"
+title: "Causal model selection tutorial"
+linkTitle: "Tutorial"
 weight: 3
 date: 2023-02-10
 description: >
-  Causal model selection.
+  Causal model selection tutorial.
 ---
 
 
