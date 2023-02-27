@@ -4,22 +4,11 @@ This is a set of lecture notes on machine learning methods for analyzing genome-
 
 The notes are written in markdown and converted to a static site using [Docsy][], a [Hugo theme module][] for technical documentation sites.
 
-In this project, the Docsy theme component is pulled in as a Hugo module, together with other module dependencies:
-
-```bash
-$ hugo mod graph
-hugo: collected modules in 566 ms
-hugo: collected modules in 578 ms
-github.com/google/docsy-example github.com/google/docsy@v0.5.1-0.20221017155306-99eacb09ffb0
-github.com/google/docsy-example github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1
-github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1 github.com/twbs/bootstrap@v4.6.2+incompatible
-github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1 github.com/FortAwesome/Font-Awesome@v0.0.0-20220831210243-d3a7818c253f
-```
-
-You can find detailed theme instructions in the [Docsy user guide][].
 
 
 ## Running the website locally
+
+You can find detailed theme instructions in the [Docsy user guide][].
 
 Building and running the site locally requires a recent `extended` version of [Hugo](https://gohugo.io).
 You can find out more about how to install Hugo for your environment in our
