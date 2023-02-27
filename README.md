@@ -4,8 +4,6 @@ This is a set of lecture notes on machine learning methods for analyzing genome-
 
 The notes are written in markdown and converted to a static site using [Docsy][], a [Hugo theme module][] for technical documentation sites.
 
-
-
 ## Running the website locally
 
 You can find detailed theme instructions in the [Docsy user guide][].

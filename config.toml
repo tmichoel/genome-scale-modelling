@@ -36,14 +36,6 @@ enable = true
 [params.mermaid.flowchart]
 diagramPadding = 6
 
-[params.plantuml]
-enable = true
-theme = "default"
-
-# Set url to plantuml server
-# default is http://www.plantuml.com/plantuml/svg/
-svg_image_url = "https://www.plantuml.com/plantuml/svg/"
-
 [params.katex]
 # enable/disable KaTeX support
 enable = true
