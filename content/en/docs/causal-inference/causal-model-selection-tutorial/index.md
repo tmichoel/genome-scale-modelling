@@ -9,13 +9,6 @@ description: >
   Causal model selection tutorial.
 ---
 
-
-
-
-{{< alert title="Reference" >}}
-
-{{< /alert >}}
-
  
 #### Background
 

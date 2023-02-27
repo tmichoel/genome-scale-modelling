@@ -204,9 +204,10 @@ Elastic net regression combines ridge and lasso regularization.
 
 ```mermaid
 flowchart TB
-  beta -->Y
-  subgraph data
-  X-->Y
+  beta -->Y_i
+  subgraph i=1,...,N
+  
+  X_i-->Y_i
   end
 ```
 

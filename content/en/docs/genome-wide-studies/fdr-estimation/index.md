@@ -162,14 +162,11 @@ In reality, EM is rarely used in this context, because we rarely have a good eno
 
 Hence in the observed $p$-value histogram, $\pi_0$ can be estimated from the height of the "flat" region near $p\approx 1$.
 
-$$
-\begin{aligned}
-  \text{Pr}(H_1 \mid P\leq p) &= \frac{\text{Pr}(P\leq p \mid H_1) \text{Pr}(H1)}{\text{Pr}(P\leq p)}\\\\
-  &= \frac{\text{Pr}(P\leq p \mid H_1) \text{Pr}(H1)}{\text{Pr}(P\leq p \mid H_1) \text{Pr}(H1) + \text{Pr}(P\leq p \mid H_1) \text{Pr}(H1)}
-\end{aligned}
-$$
+We obtain
 
-
+$$
+\text{lfdr}(p) = \frac{\hat{\pi}_0}{f(p)}
+$$
 
 ## Assignment
 

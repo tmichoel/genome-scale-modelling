@@ -10,11 +10,11 @@ description: >
 ---
 
 {{< alert title="Classic paper" >}}
-Chen, Kok Hao, et al. [*Spatially resolved, highly multiplexed RNA profiling in single cells.*](https://www.science.org/doi/full/10.1126/science.aaa6090) Science 348.6233 (2015): aaa6090.
+Chen, Kok Hao, et al. [*Spatially resolved, highly multiplexed RNA profiling in single cells.*](https://www.science.org/doi/full/10.1126/science.aaa6090) Science 348.6233 (2015): aaa6090. ?
 {{< /alert >}}
 
 
-{{< alert title="Reference" >}}
+{{< alert title="Other papers" >}}
 Time-course expression papers
 
 Spatial expression papers

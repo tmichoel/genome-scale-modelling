@@ -36,7 +36,7 @@ The GTEx Consortium. *The GTEx Consortium atlas of genetic regulatory effects ac
 
 ![Sample and data types in the GTEx v8 study](gtex_369_1318_f1.png)
 
-## Figure 1 - Concepts
+### Figure 1 - Concepts
 
 - Genome-wide association studies (GWAS)
 - Expression quantitative trait locus (eQTL)
@@ -44,34 +44,34 @@ The GTEx Consortium. *The GTEx Consortium atlas of genetic regulatory effects ac
 
 ![QTL discovery](gtex_369_1318_f2.png)
 
-## Figure 2 - Concepts
+### Figure 2 - Concepts
 
 - Linkage disequilibrium (LD)
 - Stepwise regression
 
 ![Fine-mapping of cis-eQTLs](gtex_369_1318_f3.png)
 
-## Figure 3 - Concepts
+### Figure 3 - Concepts
 
 - Statistical finemapping
 - ENCODE in GWAS
 
 ![Functional mechanisms of genetic regulatory effects](gtex_369_1318_f4.png)
 
-## Figure 4 - Concepts
+### Figure 4 - Concepts
 
 - Enrichment in functional annotations
 
 ![Regulatory mechanisms of GWAS loci](gtex_369_1318_f5.png)
 
-## Figure 5 - Concepts
+### Figure 5 - Concepts
 
 - Mediation
 - Mendelian randomization (MR)
 
 ![Tissue specificity of cis-QTLs](gtex_369_1318_f6.png)
 
-## Figure 6 - Concepts
+### Figure 6 - Concepts
 
 - Logistic regression
 
