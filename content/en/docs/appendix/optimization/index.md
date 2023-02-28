@@ -10,18 +10,8 @@ description: >
 ---
 
 
-
-
 {{< alert title="Reference" >}}
+Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong. [*Mathematics for Machine Learning*](https://mml-book.github.io/) (2020).
 
-{{< /alert >}}
-
- 
-
-## Assignment
-
-
-{{< alert title="Assignment" >}}
-
-
+Chapter 7
 {{< /alert >}}
