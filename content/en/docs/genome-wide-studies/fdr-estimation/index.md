@@ -47,10 +47,19 @@ $$
 t = \frac{\overline{x_1} - \overline{x_2}}{\text{se}}
 $$
 
-where $\overline{x_1}$ and $\overline{x_2}$ are the average expression levels of the gene in each group, $\text{se}$ is the pooled within-group standard error.
+where $\overline{x_1}$ and $\overline{x_2}$ are the average expression levels of the gene in each group, and $\text{se}$ is the pooled within-group standard error:
 
 $$
-\text{se} = 
+\text{se} = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_1}}
+$$
+
+where $s_i^2$ and $n_i$ are the variance and number of samples in group $i$, respectively
+
+$$
+\begin{aligned}
+  \overline{x_i} &= \frac{1}{n_i}\sum_{j\in G_i} x_{j} \\\\
+  s_i^2 &= \frac{1}{(n_i-1)}\sum_{j\in G_i} (x_i - \overline{x_i})^2
+\end{aligned}
 $$
 
 The $t$-statistic measures the difference in average expression between the two groups, relative to the natural variation within each group. The greater $|t|$, the more likely there is a true difference between the groups. Nevertheless, even if there is no true difference, some variation between the groups will be observed in a finite number of samples due to random sampling noise. The distribution of $t$-values observed between two groups when in fact there is no true difference between them is called the **null distribution**. Statistical significance is usually expressed by the $p$-value, which, for a given value of $t$, expresses the probability to observe a $t$-statistic greater than $t$ (in absolute value) under the null hypothesis:
