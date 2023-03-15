@@ -88,16 +88,16 @@ The $p$-value is often wrongly interpreted as saying that the probability that o
 
 To get a feel for what such probabilities mean, consider the following table:
 
-|                 | Not Significant | Significant | Total |
+|                 | Significant | Not Significant | Total |
 |-----------------|-----------------|-------------|-------|
-| **$H_0$ true**  | $U$             | $V$         | $M_0$ |
-| **$H_0$ false** | $T$             | $S$         | $M_1$ |
-|**Total**        | $M-R$           | $R$         | $M$   |
+| **$H_0$ true**  | $F$             | $M_0-F$         | $M_0$ |
+| **$H_1$ true** | $T$             | $M_1-T$         | $M_1$ |
+|**Total**        | $S$           | $M-S$         | $M$   |
 
 Then the false discovery rate is
 
 $$
-\text{FDR} = \mathbb{E}\left(\frac{V}{R}\right)
+\text{FDR} = \mathbb{E}\left(\frac{F}{S}\right)
 $$
 
 Obviously, we never know the true value of the numbers in the table, and hence FDR must be estimated. There exist several approaches for doing this. We consider two popular ones: the plug-in estimator and the Bayesian approach from Storey's paper.
