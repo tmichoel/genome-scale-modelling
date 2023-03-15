@@ -150,7 +150,7 @@ $$
 \end{aligned}
 $$
 
-The word *"local"* refers to the fact that the above expression gives the expected rate of false positive among all genes with $p$-value equal to $p$, as opposed to the *"tail"* FDR estimated in the previous section giving the he expected rate of false positive among all genes with $p$-value less than or equal to $p$. 
+The word *"local"* refers to the fact that the above expression gives the expected rate of false positives among all genes with $p$-value equal to $p$, as opposed to the *"tail"* FDR estimated in the previous section giving the he expected rate of false positive among all genes with $p$-value less than or equal to $p$. 
 
 In reality, EM is rarely used in this context, because we rarely have a good enough idea about a parametric form for the alternative distribution. Instead a non-parametric approach is used that exploits the knowledge that:
 
@@ -177,10 +177,48 @@ $$
 \text{lfdr}(p) = \frac{\hat{\pi}_0}{f(p)}
 $$
 
+It remains to estimate the p.d.f. of the real $p$-value distribution $f(p)$. In the popular [q-value package](https://github.com/StoreyLab/qvalue), this is done by [kernel density estimation](https://en.wikipedia.org/wiki/Kernel_density_estimation) followed by some smoothing.
+
+### $Q$-values
+
+The local false discovery rate provide a useful measure for the importance of a feature with $p$-value $p$. However, $p$-values themselves represent *tail* probabilities, $p=\text{Pr}(P\leq p \mid H_0)$, see above. Similarly, one is interested in the tail probability
+
+$$
+q = \text{Pr}(H_0\mid P\leq p)
+$$
+
+and this is called the $q$-value. It tells us the estimated false discovery rate among all features that are equally or more significant than a feature with $p$-value $p$.
+
+Writing $F(p)$, $F_0(p)$ and $F_1(p)$ for the cumulative probability functions of the observed, null, and alternative $p$-value distributions, the reasoning above can be repeated to obtain 
+
+$$
+F(p)=\pi_0 F_0(p) + (1-\pi_0) F_1(p) = \pi_0 p + (1-\pi_0) F_1(p) 
+$$
+
+where we used $F_0(p)=p$. It follows that
+
+$$
+q(p) = \text{Pr}(H_0\mid P\leq p) = \text{Pr}(Z=0\mid P\leq p) =\frac{\pi_0 p}{F(p)}
+$$
+
 ## Assignment
 
 
 {{< alert title="Assignment" >}}
+We will implement and test methods from Storey and Tibshirani's ["Statistical significance for genomewide studies"](https://www.pnas.org/doi/10.1073/pnas.1530509100) paper
 
+We will use the same expression and clinical data from the TCGA breast cancer paper from the unsupervised clustering assignment:
 
+- Comprehensive molecular portraits of human breast tumours. Nature 490, 61–70 (2012). https://doi.org/10.1038/nature11412
+- RNA expression data are available from https://gdc.cancer.gov/about-data/publications/brca_2012, use the data file with 348 tumours.
+- 
+Clinical data are available from the Supplementary Tables at the paper link above.
+
+Solve the following tasks and submit your solution as a notebook file or link to a github repository:
+
+1. Compute two-sample t-statistics for differential expression of each gene between ER positive and ER negative groups.
+2. Compute theoretical and empirical p-values for each gene (use the permutation procedure from Remark C in the paper).
+3. Plot the p-value histograms. Do the theoretical and empirical distributions differ?
+4. Implement the algorithm for estimating q-values from Remark B in the paper.
+5. Reproduce Fig. 2 from the paper for the ER+/- differential expression p-values.
 {{< /alert >}}
