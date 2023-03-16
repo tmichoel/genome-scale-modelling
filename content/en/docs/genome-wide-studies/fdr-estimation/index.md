@@ -179,12 +179,10 @@ $$
 
 It remains to estimate the p.d.f. of the real $p$-value distribution $f(p)$. In the popular [q-value package](https://github.com/StoreyLab/qvalue), this is done by [kernel density estimation](https://en.wikipedia.org/wiki/Kernel_density_estimation) followed by some smoothing.
 
-### $Q$-values
-
-The local false discovery rate provide a useful measure for the importance of a feature with $p$-value $p$. However, $p$-values themselves represent *tail* probabilities, $p=\text{Pr}(P\leq p \mid H_0)$, see above. Similarly, one is interested in the tail probability
+The local false discovery rate provide a useful measure for the importance of a feature with $p$-value $p$. However, $p$-values themselves represent *tail* probabilities, $p=\text{Pr}(P\leq p \mid H_0)$, see above. Similarly, we can compute the FDR among all features with $p$-value less than some threshold $p$:
 
 $$
-q = \text{Pr}(H_0\mid P\leq p)
+\text{FDR}(p) = \text{Pr}(H_0\mid P\leq p)
 $$
 
 and this is called the $q$-value. It tells us the estimated false discovery rate among all features that are equally or more significant than a feature with $p$-value $p$.
@@ -198,7 +196,15 @@ $$
 where we used $F_0(p)=p$. It follows that
 
 $$
-q(p) = \text{Pr}(H_0\mid P\leq p) = \text{Pr}(Z=0\mid P\leq p) =\frac{\pi_0 p}{F(p)}
+\text{FDR}(p) = \text{Pr}(H_0\mid P\leq p) = \text{Pr}(Z=0\mid P\leq p) =\frac{\pi_0 p}{F(p)}
+$$
+
+### $Q$-values
+
+The $q$-value of a feature with $p$-value $p$ is defined as the minimum FDR that can be attained when calling that feature significant, that is, by choosing a $p$-value threshold $r\geq p$. Hence
+
+$$
+q(p) = \min_{r\geq p} \text{FDR}(r)
 $$
 
 ## Assignment
@@ -211,8 +217,7 @@ We will use the same expression and clinical data from the TCGA breast cancer pa
 
 - Comprehensive molecular portraits of human breast tumours. Nature 490, 61–70 (2012). https://doi.org/10.1038/nature11412
 - RNA expression data are available from https://gdc.cancer.gov/about-data/publications/brca_2012, use the data file with 348 tumours.
-- 
-Clinical data are available from the Supplementary Tables at the paper link above.
+- Clinical data are available from the Supplementary Tables at the paper link above.
 
 Solve the following tasks and submit your solution as a notebook file or link to a github repository:
 
