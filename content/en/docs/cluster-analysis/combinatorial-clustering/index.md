@@ -4,6 +4,7 @@ tags: ["cluster analysis", "algorithms"]
 title: "Combinatorial clustering"
 linkTitle: "Combinatorial clustering"
 date: 2023-02-10
+weight: 3
 description: >
   Combinatorial clustering algorithms, K-means.
 ---

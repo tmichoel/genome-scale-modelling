@@ -4,6 +4,7 @@ tags: ["cluster analysis", "algorithms"]
 title: "Mixture distributions"
 linkTitle: "Mixture distributions"
 date: 2023-02-10
+weight: 3
 description: >
   Mixture distributions
 ---
