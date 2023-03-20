@@ -50,7 +50,7 @@ $$
 where $\overline{x_1}$ and $\overline{x_2}$ are the average expression levels of the gene in each group, and $\text{se}$ is the pooled within-group standard error:
 
 $$
-\text{se} = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_1}}
+\text{se} = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}
 $$
 
 where $s_i^2$ and $n_i$ are the variance and number of samples in group $i$, respectively
@@ -94,33 +94,35 @@ To get a feel for what such probabilities mean, consider the following table:
 | **$H_1$ true** | $T$             | $M_1-T$         | $M_1$ |
 |**Total**        | $S$           | $M-S$         | $M$   |
 
+Here "F" stands for "false positive" (not affected by treatment, but still called significant), "T" for "true positive". The second column contains respectively the "true negative" and "false negative" results.
+
 Then the false discovery rate is
 
 $$
 \text{FDR} = \mathbb{E}\left(\frac{F}{S}\right)
 $$
 
-Obviously, we never know the true value of the numbers in the table, and hence FDR must be estimated. There exist several approaches for doing this. We consider two popular ones: the plug-in estimator and the Bayesian approach from Storey's paper.
+Obviously, we never know the true value of the numbers in the table, and hence FDR must be estimated. There exist several approaches for doing this. We consider two popular ones: the plug-in estimator and a Bayesian approach.
 
 ### Plug-in estimator of the FDR
 
-Consider again the differential expression problem. Compute $t$-statistics for each gene and consider a range of thresholds $C$, either on the absolute $t$-values or on the corresponding $p$-values. For each value of $C$, we know $R_{obs}(C)$, the observed number of significant genes at threshold $C$.
+Consider again the differential expression problem. Compute $t$-statistics for each gene and consider a range of thresholds $C$, either on the absolute $t$-values or on the corresponding $p$-values. For each value of $C$, we know $S_{obs}(C)$, the observed number of significant genes at threshold $C$.
 
-Now generate $K$ random permutations of the group labels, and compute for each permutation $k$, $V_{obs}(C,k)$, the number of significant genes at threshold $C$ in permutation $k$, which by virtue of the randomization, must all correspond to cases where $H_0$ is true. Compute the average over all permutations:
+Now generate $K$ random permutations of the group labels, and compute for each permutation $k$, $F_{obs}(C,k)$, the number of significant genes at threshold $C$ in permutation $k$, which by virtue of the randomization, must all correspond to cases where $H_0$ is true. Compute the average over all permutations:
 
 $$
-V_{obs}(C) = \frac{1}{K}\sum_{k=1}^K V_{obs}(C,k)
+F_{obs}(C) = \frac{1}{K}\sum_{k=1}^K F_{obs}(C,k)
 $$
 
 The plug-in estimate of the FDR at threshold $C$ is then defined as
 
 $$
-\widehat{\text{FDR}}(C) = \frac{V_{obs}(C)}{R_{obs}(C)}
+\widehat{\text{FDR}}(C) = \frac{F_{obs}(C)}{S_{obs}(C)}
 $$
 
 We can now vary $C$ until we reached a desired FDR value, e.g. 10%, such that we expect no more than 10% of the genes we call differentially expressed to be false positives.
 
-Note that in practice, the number of permutations $K$ need not be very large to reach a stable value for the average. This is because in practice
+Note that in practice, the number of permutations $K$ need not be very large to reach a stable value for the average. This is because in each permutation, we obtain random $p$-values for a large number of features (genes).
 
 ### Bayesian estimate of the FDR
 
@@ -182,10 +184,10 @@ It remains to estimate the p.d.f. of the real $p$-value distribution $f(p)$. In 
 The local false discovery rate provide a useful measure for the importance of a feature with $p$-value $p$. However, $p$-values themselves represent *tail* probabilities, $p=\text{Pr}(P\leq p \mid H_0)$, see above. Similarly, we can compute the FDR among all features with $p$-value less than some threshold $p$:
 
 $$
-\text{FDR}(p) = \text{Pr}(H_0\mid P\leq p)
+\text{FDR}(p) = \text{Pr}(H_0\mid P\leq p).
 $$
 
-and this is called the $q$-value. It tells us the estimated false discovery rate among all features that are equally or more significant than a feature with $p$-value $p$.
+This tells us the estimated false discovery rate among all features that are equally or more significant than a feature with $p$-value $p$.
 
 Writing $F(p)$, $F_0(p)$ and $F_1(p)$ for the cumulative probability functions of the observed, null, and alternative $p$-value distributions, the reasoning above can be repeated to obtain 
 
