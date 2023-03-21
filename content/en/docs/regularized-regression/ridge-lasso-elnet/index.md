@@ -232,7 +232,7 @@ We will use data from the original Cancer Cell Line Encyclopedia.
 3. Find and understand, and implement the elastic net regression fitting procedure employed by the authors in the paper's supplementary methods. Efficient implementations for fitting ridge, lasso, and elastic net regularized regression models are available in most programming languages (R, python, julia, matlab), search for glmnet in your language of choice!
  
 
-4. Try to reproduce Fig 2c and Fig 4a. Do you find the same selected expression features? Note that the paper used both gene expression and mutational features and you used only gene expression features. How could this difference affect the results?
+4. Reproduce Fig 2c and Fig 4a. Do you find the same selected expression features? Note that the paper used both gene expression and mutational features and you used only gene expression features. How could this difference affect the results?
 
 {{< /alert >}}
 
