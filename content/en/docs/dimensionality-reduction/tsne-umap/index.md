@@ -13,11 +13,11 @@ description: >
 
 
 {{< alert title="Reference" >}}
-\[TSNE\] L.J.P. van der Maaten and G.E. Hinton. Visualizing High-Dimensional Data Using t-SNE. Journal of Machine Learning Research 9(Nov):2579-2605, 2008.
+\[TSNE\] L.J.P. van der Maaten and G.E. Hinton. [*Visualizing Data Using t-SNE*](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf). Journal of Machine Learning Research 9(Nov):2579-2605, 2008.
 
 <https://lvdmaaten.github.io/tsne/>
     
-\[UMAP\] McInnes, L, Healy, J, UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction, ArXiv e-prints 1802.03426, 2018
+\[UMAP\] McInnes, L, Healy, J, [*UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction*](https://arxiv.org/abs/1802.03426), ArXiv e-prints 1802.03426, 2018
 
 <https://github.com/lmcinnes/umap>
 {{< /alert >}}
@@ -111,7 +111,12 @@ $$
 
 The Cauchy distribution offers additional advantages in the numerical optimization of the cost function.
 
+{{< alert title="Gaussian vs. Cauchy distribution">}}
 ![Gaussian ($\sigma=1/\sqrt{2}$) vs Cauchy p.d.f. for $r\geq 0$.](tSNE-gauss-cauchy.png)
+
+Gaussian ($\sigma=1/\sqrt{2}$) vs Cauchy p.d.f. for $r\geq 0$.
+
+{{< /alert>}}
 
 ### Summary
 
@@ -161,7 +166,15 @@ layout (cost function).
 
 ## A comparison of dimension reduction algorithms
 
+
+{{< alert title="A comparison of dimension reduction algorithms.">}}
 ![A comparison of dimension reduction algorithms.](dim-red-comparison-nips.png)
+
+A comparison of dimension reduction algorithms.
+
+Figure from the [UMAP paper](https://arxiv.org/abs/1802.03426).
+
+{{< /alert>}}
 
 ## Practical recommendations
 
@@ -173,7 +186,7 @@ layout (cost function).
 
 An excellent reference for using t-SNE for single-cell data:
 
-Kobak & Berens. *The art of using t-SNE for single-cell transcriptomics*. Nat. Comm. **10**:5416 (2019) <https://doi.org/10.1038/s41467-019-13056-x>
+Kobak & Berens. [*The art of using t-SNE for single-cell transcriptomics*.](https://doi.org/10.1038/s41467-019-13056-x) Nat. Comm. **10**:5416 (2019)
 
 See also: <https://github.com/berenslab/rna-seq-tsne>
 
@@ -182,5 +195,49 @@ See also: <https://github.com/berenslab/rna-seq-tsne>
 
 {{< alert title="Assignment" >}}
 
+In this assignment you will go through a typical single-cell RNA-seq analysis, trying to reproduce some published results from:
 
+Kobak & Berens. [*The art of using t-SNE for single-cell transcriptomics*.](https://doi.org/10.1038/s41467-019-13056-x) Nat. Comm. **10**:5416 (2019)
+
+
+**Prerequisites**
+
+- The Github repository accompanying the paper: https://github.com/berenslab/rna-seq-tsne.
+- Mouse V1 (primary visual cortex) and ALM (anterior lateral motor cortex) SMART-seq data: https://portal.brain-map.org/atlases-and-data/rnaseq/mouse-v1-and-alm-smart-seq. This is the data that Kobak & Berens refer to as the "Tasic et al. data":
+  
+    - Download the gene-level read count zip files.
+    - Read the readme files (of course!)
+    - We will work with the exon matrix files only.
+
+- Cell cluster annotation file: https://raw.githubusercontent.com/berenslab/rna-seq-tsne/master/data/tasic-sample_heatmap_plot_data.csv.
+
+**Tasks**
+
+- Write a script to read the SMART-seq data files and merge the data in a single data structure. Your structure will need:
+  
+    - A gene x cell (or cell x gene) read count matrix containing all cells (V1 + ALM). You should have data for 45,768 genes in 25,481 cells.
+    - The unique identifiers of all cells.
+
+- Read the cell cluster annotation file and remove all cells that don't have an annotation from your data. You should now have 23,822 cells remaining.
+- Remove all cells and all genes that have all near-zero counts. What threshold (number of reads) did Kobak & Berens use to define "near-zero" expression?
+- Implement the "Feature selection" steps described in the paper Methods:
+  - Compute the fraction of near-zero counts for each gene (using the same threshold as in the previous step) (eq 8 in the paper).
+  - Compute the mean log2 expression over the non-zero values for each gene (eq. 9 in the paper).
+  - Reproduce Supplementary Figure 4 (without the gene names).
+  - Select the relevant genes using eq. 10. You can use the parameter values from Supplementary Figure 4 and don't have to implement the parameter fitting procedure. How many genes do you retain?
+
+- Implement the "Sequencing depth normalization" described in the paper Methods:
+  - Note that sequencing depth normalization is applied by computing the library sizes (total number of reads) for each cell using all genes.
+  - Keep the normalized data only for the genes from the "feature selection" step.
+ 
+- Perform PCA and t-SNE dimensionality reduction:
+  - You may work with the full data if you have sufficient compute resources, otherwise create a small toy dataset where you keep every 25th cell (953 cells in total).
+  - Standardize (mean zero, standard deviation one) the data. Recall the lecture on unsupervised clustering: if we want all features (genes) to have equal influence on the clustering/dimensionality reduction, should we standardize over the gene or cell dimension?
+  - Do PCA and retain the first two principal components.
+  - Apply t-SNE using your choice of software implementation. Generate multiple solutions (easy if you use the toy dataset), similar to Kobak & Berens, Figure 2 (c-f) (you don't need to use identical settings, but explore some of the input settings for t-SNE).
+
+- Generate scatter plot figures:
+  
+  - Make figures for PCA and the various t-SNE results you generated.
+  - Use the colors from the cell cluster annotation file to confirm that your figures look similar to Kobak & Berens, Figure 2. The figures will of course not be identical, especially if you use a toy dataset, but should display similar patterns.
 {{< /alert >}}
