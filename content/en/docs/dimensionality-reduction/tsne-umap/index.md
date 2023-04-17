@@ -51,7 +51,7 @@ The variances $\sigma_i$ are chosen such that the perplexities
     
 $$
 \begin{aligned}
-    {\cal P}_i = \exp\Bigl(-\sum_{j\neq i} p_{j\mid i}\log p_{j\mid i}\Bigr)
+    \mathcal{P_i} = \exp\Bigl(-\sum_{j\neq i} p_{j\mid i}\log p_{j\mid i}\Bigr)
 \end{aligned}
 $$ 
 
@@ -67,7 +67,7 @@ $$
 
 such that $\sum_{ij}p_{ij}=1$
 
-A map is a two or three-dimensional representation ${\cal Y}=\{y_1,\dots,y_N\}$ of the high-dimensional data ${\cal X}=\{x_1,\dots,X_N\}$.
+A map is a two or three-dimensional representation ${\cal Y}=\{y_1,\dots,y_N\}$ of the high-dimensional data ${\cal X}=\{x_1,\dots,x_N\}$.
 
 In the low-dimensional representation, we define the probability of picking $y_i$ and $y_j$ as neighbors by 
 
