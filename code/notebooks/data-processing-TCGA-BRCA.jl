@@ -100,11 +100,11 @@ fout = datadir("exp_pro","TCGA-BRCA","TCGA-BRCA-ER-exp-348-med.csv");
 CSV.write(fout,dat);
 
 # ╔═╡ Cell order:
-# ╟─eb339710-dd12-11ed-2124-cf73816253ef
+# ╠═eb339710-dd12-11ed-2124-cf73816253ef
 # ╠═97ad8296-6caf-432f-b599-6cb8ba60199c
 # ╠═fe71668a-d75a-4223-b050-85f5586f0604
 # ╠═4bed867b-c741-4c62-bdd3-67a423401b88
-# ╟─7cdb12c2-02cd-4f95-8f0d-61f3a192dfa8
+# ╠═7cdb12c2-02cd-4f95-8f0d-61f3a192dfa8
 # ╠═e4914491-77eb-4214-9b0e-b3dfe86c956d
 # ╠═15136b36-cb9b-466a-a38e-a23243e3771e
 # ╟─ede73679-a01c-42f4-b8e6-181ffc22a7fb
