@@ -78,7 +78,7 @@ md"### Save data
 fexpr = datadir("exp_pro","mouse-brain-single-cell","mouse_ALM_VISp_gene_expression.arrow");
 
 # ╔═╡ 7530a342-e562-4f03-a525-eb9dc825bccf
-
+Arrow.write(fexpr,df)
 
 # ╔═╡ 28b27457-ecda-4de2-9773-f04e6521e3d2
 # ╠═╡ disabled = true
