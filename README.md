@@ -85,3 +85,5 @@ using DrWatson
 @quickactivate "Genome-scale ML code"
 ```
 which auto-activate the project and enable local path handling from DrWatson.
+
+The main code files are [Pluto notebooks](https://plutojl.org/) and are located in the [notebooks folder](https://github.com/tmichoel/genome-scale-modelling/tree/main/code/notebooks). To run the reactive notebooks, follow the instruction at the [bottom of the Pluto homepage](https://plutojl.org/).

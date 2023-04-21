@@ -140,7 +140,7 @@ CSV.write(fsens_out,actarea);
 # ╠═2df5510e-02c0-49ca-a47b-b27d2df861e8
 # ╠═6a03d77b-8c06-4594-9195-099dea1ae792
 # ╠═56ae56ff-5835-4d78-899e-be19c359ff7d
-# ╟─0c51af6e-b1f5-4c90-95e6-2dc2f06d6d95
+# ╠═0c51af6e-b1f5-4c90-95e6-2dc2f06d6d95
 # ╟─e9fc18e5-fa1b-4d0d-9d5b-6cb839aceb7e
 # ╠═2f4a7a29-e626-4c35-9245-ffaf3449be26
 # ╟─4659b47a-4089-40a1-86a8-0c2e7ccc092f
@@ -162,7 +162,7 @@ CSV.write(fsens_out,actarea);
 # ╠═c83465d7-090c-4439-9e68-3de8abde3169
 # ╟─f156151a-62b6-4cf7-acf9-5162358ec3be
 # ╠═ba90046b-3283-451f-a21d-30d86be1d1f7
-# ╟─13fe29e9-475e-42d6-ae01-58f2286d4b90
+# ╠═13fe29e9-475e-42d6-ae01-58f2286d4b90
 # ╠═d7b4ee64-7207-40c5-b8ae-ed6c72e441fb
 # ╠═ae83fe97-d170-44c3-bc05-140d88a80e43
 # ╠═1c0e0e6b-cd37-4cf2-84de-7d599ba03fbc
