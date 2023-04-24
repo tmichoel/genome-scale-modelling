@@ -27,6 +27,6 @@ Schadt EE, Molony C, Chudin E, Hao K, Yang X, Lum PY, et al. (2008) [*Mapping th
 
 Sign up for a [Synapse account](https://www.synapse.org/). Find the [Human Liver cohort data](https://www.synapse.org/#!Synapse:syn4499)
 
-Apply mediation to find targets of LDLR?
+Apply mediation.
 
 {{< /alert >}}
