@@ -102,18 +102,6 @@ select!(df, findall(tf))
 # ╔═╡ ab5076b6-fcc8-46dc-b941-0313f59a2035
 df.Column1 = string.(df.Column1)
 
-# ╔═╡ 224ae815-e34e-48bd-891a-d7b5c8c48f17
-# ╠═╡ disabled = true
-#=╠═╡
-df2 = permutedims(df,1)
-  ╠═╡ =#
-
-# ╔═╡ 1a0aace0-3e04-4293-b05a-354154c302f1
-# ╠═╡ disabled = true
-#=╠═╡
-size(df2)
-  ╠═╡ =#
-
 # ╔═╡ 7f0e001d-9f08-4f85-a4a5-9b9140435a13
 md"### Save data
 "
@@ -122,10 +110,7 @@ md"### Save data
 fexpr = datadir("exp_pro","mouse-brain-single-cell","mouse_ALM_VISp_gene_expression_by_genes.arrow");
 
 # ╔═╡ 7530a342-e562-4f03-a525-eb9dc825bccf
-# ╠═╡ disabled = true
-#=╠═╡
-Arrow.write(fexpr,df2)
-  ╠═╡ =#
+Arrow.write(fexpr,df)
 
 # ╔═╡ Cell order:
 # ╟─5fb9f4f2-df55-11ed-067c-09eeaf9c6bf9
@@ -139,7 +124,7 @@ Arrow.write(fexpr,df2)
 # ╠═34b3fc77-5523-4008-aed8-03ba7fcfe115
 # ╠═7826aef0-fda3-4a9f-b556-d4fac9e0ed03
 # ╠═4280ad62-82d5-4551-b502-9bb06af4bf96
-# ╠═568f73e1-f459-4d7b-820a-6731c12691ec
+# ╟─568f73e1-f459-4d7b-820a-6731c12691ec
 # ╠═5c38ec32-0265-4bc5-be16-48b3d899b875
 # ╠═330e3bc0-7fea-4fc6-8397-c0ab7304d661
 # ╠═702db3b6-79c3-4fb6-851c-2cf9047ff081
@@ -154,8 +139,6 @@ Arrow.write(fexpr,df2)
 # ╠═d07682b7-f317-48fd-af15-9c86a8b3b4d1
 # ╠═de329d2b-b611-470d-a564-9d8238d67de4
 # ╠═ab5076b6-fcc8-46dc-b941-0313f59a2035
-# ╠═224ae815-e34e-48bd-891a-d7b5c8c48f17
-# ╠═1a0aace0-3e04-4293-b05a-354154c302f1
-# ╠═7f0e001d-9f08-4f85-a4a5-9b9140435a13
+# ╟─7f0e001d-9f08-4f85-a4a5-9b9140435a13
 # ╠═aaf6ee66-e5b1-4531-987d-53f9b318cd3d
 # ╠═7530a342-e562-4f03-a525-eb9dc825bccf
