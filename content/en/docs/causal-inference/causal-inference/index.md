@@ -15,7 +15,9 @@ description: >
 Schadt, E., Lamb, J., Yang, X. et al. [*An integrative genomics approach to infer causal associations between gene expression and disease*](https://doi.org/10.1038/ng1589). Nat Genet 37, 710–717 (2005).
 {{< /alert >}}
 
- 
+## Mediation analysis
+
+## Instrumental variable analysis
 
 ## Assignment
 
