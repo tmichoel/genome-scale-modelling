@@ -17,6 +17,15 @@ Schadt, E., Lamb, J., Yang, X. et al. [*An integrative genomics approach to infe
 
 ## Mediation analysis
 
+
+{{< alert title="Cis-trans eQTLs" >}}
+![Cis-trans eQTLs](cis-trans-eqtl.png)
+
+
+
+Figure by Sean Bankier from [this review](https://doi.org/10.3389/fendo.2022.949061).
+{{< /alert >}}
+
 ## Instrumental variable analysis
 
 ## Assignment
