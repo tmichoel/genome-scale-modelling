@@ -72,12 +72,6 @@ md"Merge data:"
 # ╔═╡ bf140594-caae-4f97-85ae-f959a634cc13
 df = innerjoin(dfALM,dfVIS,on=:Column1)
 
-# ╔═╡ 7256041f-74a4-495c-a0e5-9f73bf10cfb1
-# ╠═╡ disabled = true
-#=╠═╡
-dfVIS = DataFrame(CSV.File(fVIS))
-  ╠═╡ =#
-
 # ╔═╡ 5ecc65c3-8b59-4bae-a87e-b2e7164f4b0e
 md"### Cluster label data"
 
