@@ -78,6 +78,7 @@ Figure obtained from [full text on EuropePMC](https://europepmc.org/article/med/
 Concepts
 
 - Enrichment in functional annotations
+- Mediation analysis
 
 ### Figure 5
 
@@ -92,7 +93,6 @@ Figure obtained from [full text on EuropePMC](https://europepmc.org/article/med/
 
 Concepts
 
-- Mediation
 - Mendelian randomization (MR)
 
 ### Figure 6 
