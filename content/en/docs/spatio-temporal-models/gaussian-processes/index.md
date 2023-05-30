@@ -157,7 +157,7 @@ $$
 \mathbf{K} = \sum_{j=1}^p \sigma_j^2 \mathbf{K}_j  + \sigma_e^2 I_N
 $$
 
-and the variance explained by the $j^{\text{th}}$ component is
+and the **variance explained** by the $j^{\text{th}}$ component is
 
 $$
 \frac{\sigma_j^2\mathrm{tr}(\mathbf{K}_j)}{\mathrm{tr}(\mathbf{K})}
@@ -167,7 +167,7 @@ $$
 
 In many applications, the "positions" $\mathbf{x}_i$ where samples are obtained are not fixed, but a finite subset of a possibly infinite, continuous range. For instance, when studying a dynamic process, we typically obtain noisy measurements $y_i$ at a finite number of time points $t_i$, and are interested in the entire underlying process $y(t)$ for all times $t$ in some time interval. Similarly, we may have measurements $y_i$ at a finite number of locations $\mathbf{x}_i$, and are interested in the entire function $y(\mathbf{x})$ for all positions $\mathbf{x}$ in some spatial region.
 
-A [Gaussian process](https://en.wikipedia.org/wiki/Gaussian_process) is a [stochastic process](https://en.wikipedia.org/wiki/Stochastic_process), to be understood as a probability distribution over functions $y(\mathbf{x})$ over some continuous domain $D$, such that the set of values of $y(\mathbf{x})$ evaluated at a finite set of points $\mathbf{x}_1,\dots,\mathbf{x}_N$ are jointly normally distributed. A Gaussian process is specified by a kernel function $k(\mathbf{x},\mathbf{x}')$, for $\mathbf{x},\mathbf{x}' \in D$. Writing $\mathbf{y} = (y(\mathbf{x}_1), \dots, y(\mathbf{x}_N))$, the kernel defines the probability distribution
+A [Gaussian process](https://en.wikipedia.org/wiki/Gaussian_process) is a [stochastic process](https://en.wikipedia.org/wiki/Stochastic_process), to be understood as a probability distribution over functions $y(\mathbf{x})$ over some continuous domain $D$, such that the set of values of $y(\mathbf{x})$ evaluated at a finite set of points $\mathbf{x}_1,\dots,\mathbf{x}_N\in D$ are jointly normally distributed. A Gaussian process is specified by a kernel function $k(\mathbf{x},\mathbf{x}')$, for $\mathbf{x},\mathbf{x}' \in D$. Writing $\mathbf{y} = (y(\mathbf{x}_1), \dots, y(\mathbf{x}_N))$, the kernel defines the probability distribution
 
 $$
 p(\mathbf{y}) = \mathcal{N}(0, \mathbf{K})
@@ -206,9 +206,9 @@ where
 
 $$
 \begin{aligned}
-  K_{ij} &= k(\mathbf{x}_i,\mathbf{x}_j)\\\\
-  \mathbf{k} &= k(\mathbf{x}_i,\mathbf{x}) \\\\
-  c &= k(\mathbf{x},\mathbf{x})
+  \mathbf{K} &= \left[ k(\mathbf{x}_i,\mathbf{x}_j) \right] \in \mathbb{R}^{N\times N}\\\\
+  \mathbf{k} &= k(\mathbf{x}_i,\mathbf{x}) \in \mathbb{R}^{N} \\\\
+  c &= k(\mathbf{x},\mathbf{x})\in \mathbb{R}
 \end{aligned}
 $$
 
